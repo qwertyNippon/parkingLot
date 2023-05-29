@@ -1,6 +1,7 @@
 tickets=[10]
 parkingSpaces=[10]
-currentTicket={}
+currentTicket={False}
+currentTicketCount={}
 
 class Parking():
 
@@ -32,8 +33,13 @@ class Parking():
         if payment == 'q':
             return
         elif '':
-            print("Your ticket has been aid and you have 15 mins to leave or else...")
-            currentTicket +=1
+            print("Your ticket has been paid and you have 15 mins to leave or else...")
+            currentTicketCount +=1
+            currentTicket={True}
+            print(currentTicketCount)
+            print(currentTicket)
+
+            # update the "currentTicket" dictionary key "paid" to True
 
             
         
