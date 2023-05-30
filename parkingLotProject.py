@@ -8,7 +8,7 @@ class Parking():
     def __init__(self, ticket, parkingSpace, currentTicketCount):
         self.ticket = ticket
         self.parkingSpace = parkingSpace
-        self.currTickCount = currentTicketCount
+        self.currentTicketCount = currentTicketCount
 
     def take_ticket(self):
         print("congrats you have a ticket")
@@ -22,7 +22,8 @@ class Parking():
         
         if payment == 'q':
             return
-        elif payment == 1:
+        elif payment == "1" or payment == "1.00":
+            # just incase user inputs 1 or 1.00
             print("Your ticket has been paid and you have 15 mins to leave or else...")
             self.currentTicketCount += 1
             self.currentTicket["paid"] = True
