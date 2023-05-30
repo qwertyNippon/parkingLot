@@ -1,19 +1,18 @@
-tickets=10
-parkingSpaces=10
-currentTicket={"paid":False, "amount":0}
+
 
 
 class Parking():
+    tickets=10
+    parkingSpaces=10
+    currentTicket={"paid":False, "amount":0}
 
-    def __init__(self, ticket, parkingSpace, currentTicketCount):
-        self.ticket = ticket
-        self.parkingSpace = parkingSpace
+    def __init__(self, currentTicketCount=0):
         self.currentTicketCount = currentTicketCount
 
     def take_ticket(self):
         print("congrats you have a ticket")
-        tickets -= 1
-        parkingSpaces -= 1
+        self.tickets -= 1
+        self.parkingSpaces -= 1
             
 # - This should decrease the amount of tickets available by 1
 # - This should decrease the amount of parkingSpaces available by 1
